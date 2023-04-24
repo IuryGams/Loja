@@ -1,0 +1,570 @@
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1180px;
+    /* box-shadow:  rgba(116, 116, 116, 0.1) 0px -1px 10px 0.1px inset; */
+}
+
+.cabecalho .cabecalho__topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    gap: 10px;
+}
+
+.cabecalho .cabecalho__topo .cabecalho__campo__pesquisa{
+    border: 0;
+    outline: none;
+    background-color: rgb(231, 231, 231);
+    padding: 0.8em;
+    border-radius: 4px;
+    width: 35%;
+}
+
+.cabecalho .cabecalho__topo .card__user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 0.3em;
+    transition: all 400ms ease-in-out;
+}
+
+.cabecalho .cabecalho__topo .card__user:hover{
+    background-color: rgb(190, 214, 235);
+    border-radius: 16px;
+}
+
+.cabecalho .cabecalho__topo .card__user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cabecalho .cabecalho__topo .card__user span{
+    font-size: 14px;
+    color: rgb(136, 136, 136);
+}
+
+.cabecalho .cabecalho__topo .card__carrinho{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10;
+    position: relative;
+}
+
+.cabecalho .cabecalho__topo .card__carrinho img{
+    grid-row: 2 span;
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cabecalho .cabecalho__topo .card__carrinho .card__texto{
+    grid-column: 2;
+    align-self: flex-end;
+    justify-self: center;
+    
+}
+
+.cabecalho .cabecalho__topo .card__carrinho .card__valor{
+    align-self: start;
+    justify-self: center;
+    font-size: 12px;
+}
+
+.cabecalho .cabecalho__navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho .cabecalho__navegacao ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cabecalho .cabecalho__navegacao ul a{
+    padding: 1em;
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 200ms ease;
+}
+
+.cabecalho .cabecalho__navegacao ul a:hover{
+    background-color:var(--cor-primaria-tipo-A);
+    color: white;
+}
+
+
+/* START SLIDER
+------------------------------------- */
+
+.slider{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 65vh;
+    position: relative;
+}
+
+.slider .slide-itens{
+    position: relative;
+}
+
+.slider .slide-itens img{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-itens > *{
+    opacity: 0;
+    position: absolute;
+    top: -1000;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.slide-itens > .ativo{
+    top: 0;
+    opacity: 1;
+    position: relative;
+    pointer-events: initial;
+}
+
+.voltar__btn,
+.proximo__btn{
+    position: absolute;
+    color: white;
+    top: 50%;
+    font-size: 46px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.5em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    transform: translate(0, -50%);
+    border-radius: 50%;
+}
+
+.proximo__btn{
+    right: 0;
+}
+
+.voltar__btn:hover,
+.proximo__btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.slider .slider__manual{
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider .slider__manual > span{
+    width: 20px;
+    display: block;
+    height: 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;  
+}
+
+.slider .slider__manual > span.ativo{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 40px;
+    border-radius: 16px;
+}
+
+/* START CONTEUDO OFERTAS
+----------------------------------- */
+
+.conteudo__ofertas{
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.conteudo__titulo{
+    text-align: center;
+    margin: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cards__itens{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em 0.2em;
+    border-radius: 8px;
+    width: 250px;
+    height: 400px;
+    background-color: #FFF;
+    position: relative;
+    margin: 0.5em 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno{
+    width: 240px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    object-fit: fill;
+    transition: all 300ms ease-in-out;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno:hover{
+    transform: scale(0.95);
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno img{
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--cor-primaria-tipo-A);
+    color: white;
+    padding: 0.5em;
+    border-top-left-radius: 8px;
+    font-weight: bold;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__img__pequeno:hover span{
+    color: red;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__infor__pequeno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;  
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__infor__pequeno:last-child{
+    margin: 0;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__infor__pequeno button{
+    border: none;
+    background-color: var(--cor-primaria-tipo-A);
+    padding: 0.7em;
+    border-radius: 12px;
+    color: white;
+    transition: all 400ms ease-in;
+    font-weight: bolder;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.conteudo__ofertas .cards__itens .card__item__pequeno .card__infor__pequeno button:hover{
+    background-color: var(--cor-primaria-tipo-B);
+    cursor: pointer;
+}
+
+.conteudo__ofertas .ofertas__rodape{
+    margin: 2em;
+}
+
+.conteudo__ofertas .ofertas__rodape .ofertas__rodape__btn{
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-primaria-tipo-A);
+    padding: 0.8em;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: all 400ms ease-in;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.conteudo__ofertas .ofertas__rodape .ofertas__rodape__btn:hover{
+    background-color: var(--cor-primaria-tipo-B);
+}
+
+.conteudo__banner{
+    width: 100%;
+    height: 60vh;
+}
+
+.conteudo__banner img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+
+/* -------------------------------------- */
+
+.conteudo__vendidos{
+    margin: 1em 0;
+}
+
+.card__item__medio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 0.2em;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card__item__medio .card__img__medio{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+
+.card__item__medio .card__img__medio:hover{
+    transform: scale(1.03);
+}
+
+.card__item__medio .card__img__medio img{
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card__item__medio .card__infor__medio h6{
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: 0.5em 0;
+}
+
+/* ----------------------------------------------------- */
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.rodape .rodape__lista{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodape .rodape__lista a{
+    text-decoration: none;
+    color: black;
+}
+
+.rodape .rodape__sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodape .rodape__sociais .rodape__icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: black;
+}
+
+.rodape .rodape__sociais .rodape__icone img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.dialog__login::backdrop{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dialog__login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    border: none;
+    overflow: hidden;
+}
+
+.dialog__login .cabecalho__form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 1em;
+    background-color: var(--cor-primaria-tipo-A);
+    color: white;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.dialog__form__login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.dialog__login .cabecalho__form button{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50%;
+}
+
+.dialog__login .cabecalho__form i{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.dialog__login .dialog__form__login .caixa__input{
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    padding: 0 1em;
+    position: relative;
+    margin: 0.65em 0;
+}
+
+.dialog__login .dialog__form__login .caixa__input input{
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    transition: all 200ms;
+    padding: 0.2em;
+    padding-left: 20px;
+    width: 100%;
+    height: 32px;
+    
+}
+
+.dialog__login .dialog__form__login .caixa__input input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--cor-primaria-tipo-A);
+}
+
+.dialog__login .dialog__form__login .caixa__input label{
+    position: absolute;
+    pointer-events: none;
+    left: 30px;
+    top: 6px;
+    transition: all 200ms ease-in-out;
+}
+
+.dialog__form__login .caixa__input input:focus + label, .dialog__form__login .caixa__input input:active + label{
+    transform: translate(-16px, -20px);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dialog__login .dialog__form__login .caixa__input input:valid ~ label{
+    transform: translate(-16px, -20px);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dialog__login .btn__login{
+    border: none;
+    background-color: var(--cor-primaria-tipo-A);
+    color: white;
+    width: 90%;
+    cursor: pointer;
+    padding: 0.5em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    initial-letter: 2px;
+    transition: all 400ms ease-in-out;
+    margin-bottom: 3vh;
+}
+
+.dialog__login .btn__login:hover{
+    background-color: var(--cor-primaria-tipo-B);
+}
+
+.rodape__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background-color:aliceblue;
+    border-top: 1.5px solid lightgray;
+}
+
+.rodape__form .btn__login{
+    margin-top: 3vh;
+    background-color: black;
+}
+
+.rodape__form .btn__login:hover{
+    background-color: rgb(32, 32, 32);
+}
+

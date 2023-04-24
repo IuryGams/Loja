@@ -1,0 +1,20 @@
+@import 'home.css';
+@import '';
+
+:root{
+    --cor-primaria-tipo-A: #12b888;
+    --cor-primaria-tipo-B: #13916d;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(136, 136, 136);
+    background-color: aliceblue;
+}
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/0b06df4dcd.js" ></script>
+    <title>Loja</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="cabecalho__topo">
+            <img src="" alt="Foto da Logo">
+            <input type="search" class="cabecalho__campo__pesquisa" placeholder="Pesquise...">
+            <div class="card__user" data-divLogin>
+                <img src="IMG/Gillyard.jpg" alt="Foto do usuario">
+                <a>Entre ou cadastre-se</a>
+            </div>
+            <div class="card__carrinho">
+                <img src="IMG/sacola.png" alt="">
+                <span class="card__texto">Minhas Compras</span>
+                <span class="card__valor">0,00 R$ (subtotal)</span>
+            </div>
+            <div>
+                <Button id="cadastro__produto">Cadastro Produto</Button>
+            </div>
+        </section>
+        <section class="cabecalho__navegacao">
+            <ul>
+                <a href="">Feminino</a>
+                <a href="">Masculino</a>
+                <a href="">Calçados</a>
+                <a href="">Jeans</a>
+                <a href="">Plus Size</a>
+                <a href="">Acessorios</a>
+                <a href="">Infantil</a>
+            </ul>
+        </section>
+    </header>
+
+    <main class="container__site">
+
+        <section class="slider" data-slider="slider">
+            <div class="slide-itens">
+                <img src="IMG/Banner.jpg" alt="Img 1">
+                <img src="IMG/Banner2.jpg" alt="Img 2">
+                <img src="IMG/Banner3.png" alt="Img 3">
+                <img src="IMG/Banner4.jpg" alt="Img 4">
+                <img src="IMG/Banner.jpg" alt="Img 5">
+            </div>
+            <button class="voltar__btn">&lt;</button>
+            <button class="proximo__btn">&gt;</button>
+            <div class="slider__manual"></div>
+        </section>
+<!-- ********************************* -->
+        <section class="conteudo__ofertas">
+            <div class="conteudo__titulo">
+                <h2>Ofertas</h2>
+            </div>
+            <div class="cards__itens">
+                <div class="card__item__pequeno">
+                    <div class="card__img__pequeno">
+                        <img src="IMG/Foto1.jpg" alt="">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>20% OFF</span>
+                    </div>
+                    <div class="card__infor__pequeno">
+                        <span>Descrição do produto</span>
+                        <span>Preço: 67R$</span>
+                        <Button>Comprar</Button>
+                    </div>
+                </div>
+                <div class="card__item__pequeno">
+                    <div class="card__img__pequeno">
+                        <img src="IMG/Foto2.jpg" alt="">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>20% OFF</span>
+                    </div>
+                    <div class="card__infor__pequeno">
+                        <span>Descrição do produto</span>
+                        <span>Preço: 67R$</span>
+                        <Button>Comprar</Button>
+                    </div>
+                </div>
+                <div class="card__item__pequeno">
+                    <div class="card__img__pequeno">
+                        <img src="IMG/Foto3.jpg" alt="">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>20% OFF</span>
+                    </div>
+                    <div class="card__infor__pequeno">
+                        <span>Descrição do produto</span>
+                        <span>Preço: 67R$</span>
+                        <Button>Comprar</Button>
+                    </div>
+                </div>
+                <div class="card__item__pequeno">
+                    <div class="card__img__pequeno">
+                        <img src="IMG/Foto4.jpg" alt="">
+                        <i class="fa-regular fa-heart"></i>
+                        <span>20% OFF</span>
+                    </div>
+                    <div class="card__infor__pequeno">
+                        <span>Descrição do produto</span>
+                        <span>Preço: 67R$</span>
+                        <Button>Comprar</Button>
+                    </div>
+                </div>
+            </div>
+            <div class="conteudo__titulo ofertas__rodape">
+                <a href="" class="ofertas__rodape__btn">Veja todos os produtos</a>
+            </div>
+        </section>
+<!-- ********************************* -->
+        <section class="conteudo__banner">
+            <a href="">
+                <img src="IMG/Banner2.jpg" alt="">
+            </a>
+        </section>
+<!-- ********************************* -->
+        <section class="conteudo__vendidos">
+            <div class="conteudo__titulo">
+                <h2>Por Categoria</h2>
+            </div>
+            <div class="cards__itens">
+                <div class="card__item__medio">
+                    <div class="card__img__medio">
+                        <img src="IMG/Foto1.jpg" alt="">
+                    </div>
+                    <div class="card__infor__medio">
+                        <h6>Moda Masculina</h6>
+                    </div>
+                </div>
+                <div class="card__item__medio">
+                    <div class="card__img__medio">
+                        <img src="IMG/Foto2.jpg" alt="">
+                    </div>
+                    <div class="card__infor__medio">
+                        <h6>Moda Feminina</h6>
+                    </div>
+                </div>
+                <div class="card__item__medio">
+                    <div class="card__img__medio">
+                        <img src="IMG/Foto3.jpg" alt="">
+                    </div>
+                    <div class="card__infor__medio">
+                        <h6>Moda Infantil</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ********************************* -->
+    </main>
+
+    <footer class="rodape">
+        <ul class="rodape__lista">
+            <a href="">Sobre nós</a>
+            <a href="">Nosso Endereço</a>
+        </ul>
+        <div class="rodape__sociais">
+            <div class="rodape__icone">
+                <img src="IMG/Instragram.png" alt="">
+                <span>@Instagram</span>
+            </div>
+            <div class="rodape__icone">
+                <img src="IMG/Facebook.png" alt="">
+                <span>@Facebook</span>
+            </div>
+        </div>
+        
+    </footer>
+
+    <dialog class="dialog__login" data-login>
+        <section data-slider="login" class="slide-itens">
+
+            <aside class="">
+                <header class="cabecalho__form">
+                    <h3>IDENTIFICAÇÃO</h3>
+                    <i class="fa-solid fa-xmark" data-closeForm></i>
+                </header>
+
+                <form action="" class="dialog__form__login" data-formLogin>
+    
+                    <div class="caixa__input">
+                        <input type="text" id="usuario" data-formDadosLogin required>
+                        <label for="usuario">Email ou CPF</label>
+                    </div>
+    
+                    <div class="caixa__input">
+                        <input type="password" id="password" data-formDadosLogin required>
+                        <label for="password">Senha</label>
+                    </div>
+    
+                    <a href="">Esqueceu sua senha ?</a>
+    
+                    <button class="btn__login" onclick="login()" type="button">Entrar</button>
+                </form>
+    
+                <footer class="rodape__form">
+                    <button href="registro.html" class="btn__login" data-RegistroLogin>Registre-se</button>
+                </footer>
+
+            </aside>
+
+            <aside>
+                <header class="cabecalho__form">
+                    <button data-voltarLogin>&lt;</button>
+                    <h3>CADASTRO</h3>
+                    <i class="fa-solid fa-xmark" data-closeForm></i>
+                </header>
+
+                <form action="POST" class="dialog__form__login" data-formLogin>
+    
+                    <div class="caixa__input">
+                        <input type="email" id="usuario" data-formDadosRegistro required>
+                        <label for="usuario">Email </label>
+                    </div>
+
+                    <div class="caixa__input">
+                        <input type="text" id="CPF" data-formDadosRegistro required>
+                        <label for="CPF">CPF</label>
+                    </div>
+
+                    <div class="caixa__input">
+                        <input type="text" id="nome" data-formDadosRegistro required>
+                        <label for="nome">Seu nome</label>
+                    </div>
+    
+                    <div class="caixa__input">
+                        <input type="text" id="sobrenome" data-formDadosRegistro required>
+                        <label for="sobrenome">Seu sobrenome</label>
+                    </div>
+
+                    <div class="caixa__input">
+                        <input type="text" id="dataNascimento" data-formDadosRegistro required>
+                        <label for="dataNascimento">Data de nascimento</label>
+                    </div>
+
+                    <div class="caixa__input">
+                        <input type="text" id="passwordRegistro" data-formDadosRegistro required>
+                        <label for="passwordRegistro">Senha</label>
+                    </div>
+
+                    <div class="caixa__input">
+                        <input type="number" id="telefone" data-formDadosRegistro required maxlength="11">
+                        <label for="telefone">Telefone</label>
+                    </div>
+
+                    <!-- <div style="display: flex; align-items: center; justify-content: center; padding: 0 0.5em;">
+                        <input type="checkbox">
+                        <p style="white-space: wrap;">Li e aceito a Política de Privacidade e Proteção de Dados da Loja *LOJA* e os Termos de Uso</p>
+                    </div> -->
+    
+                    <button class="btn__login" onclick="registro()" type="button">Cadastrar</button>
+                </form>
+            </aside>
+        </section>
+    </dialog>
+
+    <dialog class="cadastro__item">
+        <input type="file">
+        <input type="text">
+        <input type="number" name="" id="">
+        <button id="cadastro__btn">Cadastrar</button>
+    </dialog>
+
+
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="src/CRUD/create.js"></script>
+</body>
+</html>
